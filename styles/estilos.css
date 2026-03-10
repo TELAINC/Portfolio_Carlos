@@ -17,7 +17,7 @@ h2 {
 }
 
 h4 {
-    color: #0010f3a8;
+    color: rgba(45, 2, 196, 0.83);
 }
 
 .margen {
@@ -205,7 +205,7 @@ section {
     background-color: rgb(246 247 248 / 0.8);
 }
 
-button {
+.btn {
     padding: 0.6rem 1.4rem;
     border-radius: 12px;
     font-weight: 600;
@@ -215,13 +215,14 @@ button {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
-button:hover {
+.btn:hover {
     background-color: rgba(222, 222, 222, 0.807);
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(180, 150, 230, 0.3);
+
 }
 
-button:active {
+.btn:active {
     transform: translateY(0);
     filter: brightness(0.9);
 }
@@ -289,3 +290,148 @@ footer {
     opacity: 0.8;
 }
 
+#hamburger {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    header {
+        justify-content: space-between;
+        padding: .8rem 1.5rem;
+        position: relative;
+    }
+
+    #hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0.4rem;
+        cursor: pointer;
+        z-index: 20;
+    }
+
+    #hamburger:hover {
+        background: none;
+        box-shadow: none;
+        transform: none;
+    }
+
+    #hamburger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: #02404e;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+
+    #hamburger.abierto span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    #hamburger.abierto span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #hamburger.abierto span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    #navegacion {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(246 247 248 / 0.97);
+        backdrop-filter: blur(6px);
+        padding: 1.5rem;
+        border-bottom: 1px solid rgba(65, 64, 64, 0.145);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+        z-index: 15;
+    }
+
+    #navegacion.abierto {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .contenedor-proyectos {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .foto-proy {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    main {
+        margin-bottom: 3rem;
+        padding: 1rem 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+
+    /* Header */
+    header {
+        padding: .8rem 1rem;
+    }
+
+    .logo-titulo {
+        font-size: 1.1rem;
+        max-width: 200px;
+    }
+
+    #foto {
+        width: 10rem;
+        height: 10rem;
+    }
+
+    main {
+        padding: 1rem;
+    }
+
+    section {
+        margin-top: 2.5rem;
+    }
+
+    .contenedor-experiencia {
+        flex-direction: column;
+    }
+
+    .logo-experiencia {
+        width: 48px;
+    }
+
+    .contenedor-habilidades {
+        grid-template-columns: repeat(auto-fit, minmax(7rem, 1fr));
+    }
+
+    .contenedor-proyectos {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .foto-proy {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .logo-tecno img {
+        height: 28px;
+    }
+}

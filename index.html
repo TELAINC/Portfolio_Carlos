@@ -4,8 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Eduardo Portfolio</title>
+    <meta name="description"
+        content="Portafolio de Carlos Eduardo Cruz Méndez, desarrollador frontend especializado en JavaScript, React y desarrollo web. Conoce mis proyectos, habilidades y experiencia.">
+    <meta name="keywords"
+        content="Carlos Eduardo Cruz Méndez, desarrollador frontend, portafolio, JavaScript, React, Node.js, desarrollo web">
+    <meta name="author" content="Carlos Eduardo Cruz Méndez">
+    <meta name="robots" content="index, follow">
+
+
+    <meta property="og:title" content="Carlos Eduardo Cruz Méndez | Desarrollador Frontend">
+    <meta property="og:description"
+        content="Portafolio profesional con proyectos en React, JavaScript, Node.js y desarrollo web. Conoce mi experiencia y habilidades.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="">
+    <meta property="og:image" content="https://tudominio.com/img/preview-portafolio.png">
+    <meta property="og:locale" content="es_MX">
+    <meta name="theme-color" content="#0f172a">
+
+    <title>Carlos Eduardo Portafolio</title>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@900,700,500,300,400&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/logo-r/alianza-logo.png" type="image/png" sizes="16 x16">
     <link rel="stylesheet" href="styles/estilos.css">
     <link rel="stylesheet" href="styles/modal.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -13,18 +31,26 @@
 
 <body>
     <header>
-        <h1 class="logo-titulo nombre-color">Carlos Eduardo Portfolio</h1>
+        <h1 class="logo-titulo nombre-color">Carlos Eduardo Portafolio</h1>
+        <button id="hamburger" aria-label="Abrir menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <article id="navegacion">
             <nav>
                 <a href="#about">Sobre mí</a>
                 <a href="#experience">Experiencia</a>
                 <a href="#skills">Habilidades</a>
                 <a href="#projects">Proyectos</a>
-                <a href="#certifications">Certificaciones</a>
+                <!-- <a href="#certifications">Certificaciones</a>-->
             </nav>
             <div id="botones">
-                <a href="/modules/indexeng.html"><i class="fa-solid fa-language"></i></a>
-                <button type="button"><span>Descargar CV</span></button>
+                <a href="/modules/indexeng.html" aria-label="Lenguaje"><i class="fa-solid fa-language"></i></a>
+                <a href="/docs/CV Carlos_Eduardo_Cruz_Mendez.pdf" download class="btn">
+                    Descargar CV
+                </a>
+
             </div>
         </article>
     </header>
@@ -56,7 +82,7 @@
         <section id="about">
             <h2>Sobre mí</h2>
             <p class="margen">
-                Desarrollador con 6 meses de experiencia en el desarrollo y
+                Soy un desarrollador con 6 meses de experiencia en el desarrollo y
                 mantenimiento de páginas web. Capacidad para trabajar eficazmente tanto en entornos individuales
                 como en equipo, brindando soluciones de alta calidad que satisfacen las necesidades del cliente
                 y aplicando buenas prácticas de desarrollo. Apasionado por mantenerme actualizado con las últimas
@@ -225,7 +251,7 @@
                 <img src="/img/logo-p/Cap-porta.png" alt="Captura del proyecto Portafolio Web" class="foto-proy">
             </article>
         </section>
-        <section id="certifications">
+        <!-- <section id="certifications">
             <h2>Certificaciones</h2>
 
             <article class="contenedor-proyectos carta">
@@ -242,7 +268,7 @@
                 <img src="/img/logo-p/Cap-porta.png" alt="Captura del proyecto Portafolio Web" class="foto-proy">
             </article>
         </section>
-
+-->
     </main>
 
     <footer>
@@ -265,6 +291,7 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="hamburger.js"></script>
 
 </body>
 
